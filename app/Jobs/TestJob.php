@@ -14,14 +14,19 @@ class TestJob implements ShouldQueue
 
     private string $fileName;
     private string $resultsFileName;
+    private array $inputFileNames;
 
     /**
      * Create a new job instance.
      */
-    public function __construct(string $fileName, $resultsFileName)
+    public function __construct(string $fileName, $resultsFileName, $inputFileNames)
     {
         $this->fileName = $fileName;
         $this->resultsFileName = $resultsFileName;
+        if ($inputFileNames != null)
+            $this->inputFileNames = $inputFileNames;
+        else
+            $this->inputFileNames = config('app.supported_functions');
     }
 
     /**
@@ -29,10 +34,13 @@ class TestJob implements ShouldQueue
      */
     public function handle(): void
     {
-        Log::info("Running job for " . $this->fileName);
+        exec('echo tests: > /var/www/html/storage/app/private/tester/input.yaml');
+        foreach ($this->inputFileNames as $inputFileName) {
+            exec("awk 'NR > 1' /var/www/html/storage/app/private/tester/scenarios/" . $inputFileName . ".yaml >> /var/www/html/storage/app/private/tester/input.yaml");
+        }
+
         shell_exec('cd /var/www/html/storage/app/private/tester && ./tester');
 
-        Log::info("Testing finished for " . $this->fileName);
         shell_exec("mv /var/www/html/storage/app/private/tester/results/" . $this->resultsFileName .
             ' /var/www/html/storage/app/public/results/' . $this->resultsFileName);
         shell_exec('rm /var/www/html/storage/app/private/tester/*/' . $this->fileName . '*');

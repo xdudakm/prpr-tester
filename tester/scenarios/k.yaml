@@ -1,0 +1,5 @@
+tests:
+  - name: "Test k"
+    points: 0
+    sequence:
+      - in: "k"

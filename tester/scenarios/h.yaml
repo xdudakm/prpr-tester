@@ -1,36 +1,5 @@
 tests:
-  - name: "Test 2: v 1"
-    points: 1
-    sequence:
-      - in: "v"
-      - in: "1"
-      - out: "ID. mer. modulu: ID152a"
-      - out: "Hodnota 1: 154"
-      - out: "Hodnota 2: 0.5481"
-      - out: "Poznamka: ID152a#0.4254#1542#popis dat#"
-      - out: ""
-      - out: "ID. mer. modulu: ID164b"
-      - out: "Hodnota 1: 0"
-      - out: "Hodnota 2: 0"
-      - out: "Poznamka: ID164b#0.4854#1942#zmrzlina#"
-      - out: ""
-      - out: "ID. mer. modulu: -"
-      - out: "Hodnota 1: 154"
-      - out: "Hodnota 2: 1.25"
-      - out: "Poznamka: ID132a#0.4554#1842#zmrzlina 2#"
-      - out: ""
-      - out: "ID. mer. modulu: -"
-      - out: "Hodnota 1: 100"
-      - out: "Hodnota 2: 10.025"
-      - out: "Poznamka: ####"
-      - out: ""
-      - out: "ID. mer. modulu: ID121c"
-      - out: "Hodnota 1: 101"
-      - out: "Hodnota 2: 18.825"
-      - out: "Poznamka: ID121c#5.4654#1442#pas emul. #"
-      - out: ""
-      - in: "k"
-  - name: "Test 3: h"
+  - name: "Test h"
     points: 1.3
     sequence:
       #      open files and grab the output
@@ -74,8 +43,8 @@ tests:
       - out: "5 : 1"
       - out: "6 : 1"
       - in: "k"
-  - name: "Test 1: h unsuccessful file opening"
-    points: 0.0
+  - name: "Test h: unsuccessful file opening"
+    points: 0.4
     sequence:
       - in: "h"
       - out: "H: Neotvoreny subor."

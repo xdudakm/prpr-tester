@@ -8,8 +8,15 @@ use Illuminate\Support\Facades\Storage;
 
 class TesterController extends Controller
 {
+
     public function runTest(Request $request)
     {
+        $functions = explode(',', $request->get('functions'));
+        
+        $unsupported = collect($functions)->diff(collect(config('app.supported_functions')));
+
+        if ($unsupported->count() > 0)
+            return response('Unsupported functions: ' . $unsupported->implode(','));
         // Validate the request
         $request->validate([
             'file' => 'required|file|mimes:c',
@@ -20,7 +27,7 @@ class TesterController extends Controller
         $baseFileName = str_replace('.c', '', basename($path));
         $resultFilename = $baseFileName . '_release.log';
 
-        TestJob::dispatch($baseFileName, $resultFilename);
+        TestJob::dispatch($baseFileName, $resultFilename, $functions);
 
         return response('Your results will be soon available at ' . route('results', $resultFilename))
             ->header('Content-Type', 'text/plain');

@@ -1,7 +1,7 @@
 timeout: 1
 
 locations:
-  tests_file: "./input/input-v1.yaml" # Path to the tests file
+  tests_file: "./input.yaml" # Path to the tests file
   tests_results: "results"  # Folder for storing test results
   compiled: "compiled"  # Folder for storing compiled files
   c_files: "files"
