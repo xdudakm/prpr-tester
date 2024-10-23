@@ -47,7 +47,7 @@ RUN cd ./storage/app/private && \
     mkdir ./tester/files
 
 RUN cp ./tester/* ./storage/app/private/tester/ -r
-RUN chmod +775 ./storage -R \
+RUN chmod +775 ./storage -R
 
 EXPOSE 8080
 ENTRYPOINT ["/usr/local/bin/init.sh"]
