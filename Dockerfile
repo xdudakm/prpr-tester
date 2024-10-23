@@ -30,6 +30,8 @@ COPY . /var/www/html
 RUN cp laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
 
 RUN touch database/database.sqlite
+RUN  mkdir -p storage/framework/views
+RUN chmod +775 database/database.sqlite
 
 RUN composer install --no-interaction --ignore-platform-reqs
 
@@ -45,6 +47,7 @@ RUN cd ./storage/app/private && \
     mkdir ./tester/files
 
 RUN cp ./tester/* ./storage/app/private/tester/ -r
+RUN chmod +775 ./storage -R \
 
 EXPOSE 8080
 ENTRYPOINT ["/usr/local/bin/init.sh"]
