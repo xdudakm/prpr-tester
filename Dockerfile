@@ -27,8 +27,8 @@ COPY . /var/www/html
 
 RUN composer install --no-interaction --ignore-platform-reqs
 
-RUN mkdir ./storage/app/public/results || :
-RUN mkdir ./storage/app/private || :
+RUN mkdir ./storage/app/public/results -p || :
+RUN mkdir ./storage/app/private -p || :
 RUN cd ./storage/app/private && \
     wget -q https://raw.githubusercontent.com/FedorViest/opp_prpr2024/refs/heads/main/Tester/dist.tar.gz && \
     tar xvfz dist.tar.gz --strip-components=1 && \
