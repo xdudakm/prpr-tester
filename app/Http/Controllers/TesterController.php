@@ -22,8 +22,7 @@ class TesterController extends Controller
         $baseFileName = str_replace('.c', '', basename($path));
         $resultFilename = $baseFileName . '_release.log';
 
-        TestJob::dispatch($baseFileName, $resultFilename);
-        shell_exec('php artisan scheduler:run &');
+        TestJob::dispatchSync($baseFileName, $resultFilename);
 
         return response()->json(['result_url' => route('results', $resultFilename)]);
     }
