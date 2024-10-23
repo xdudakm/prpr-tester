@@ -30,7 +30,7 @@ class TestJob implements ShouldQueue
     public function handle(): void
     {
         Log::info("Inside handle function");
-        Log::info(shell_exec("pwd"));
+        shell_exec('pwd');
         shell_exec('cd ./storage/app/private/tester; ./tester');
         shell_exec("mv ./storage/app/private/tester/results/" . $this->resultsFileName .
             ' ./storage/app/public/results/' . $this->resultsFileName);
