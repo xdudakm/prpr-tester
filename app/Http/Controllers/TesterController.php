@@ -16,21 +16,20 @@ class TesterController extends Controller
             'file' => 'required|file|mimes:c',
         ]);
 
-        Log::info("Request received, creating job");
         // Store the uploaded file
         $path = $request->file('file')->store('tester/files');
         $baseFileName = str_replace('.c', '', basename($path));
         $resultFilename = $baseFileName . '_release.log';
 
-        TestJob::dispatchSync($baseFileName, $resultFilename);
+        TestJob::dispatch($baseFileName, $resultFilename);
 
-        return response()->json(['result_url' => route('results', $resultFilename)]);
+        return response('Your results will be soon available at ' . route('results', $resultFilename));
     }
 
     public function getResults(Request $request, string $fileName)
     {
         $path = '/results/' . $fileName;
-        if(!Storage::disk('public')->exists($path))
+        if (!Storage::disk('public')->exists($path))
             return response('Working on it');
         $content = Storage::disk('public')->get($path);
         return response($content)->header('Content-Type', 'text/plain');

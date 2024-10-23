@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y \
     valgrind \
     gcc \
     wget \
-    cron
+    cron \
+    supervisor
 
 # Install Composer globally
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
@@ -25,6 +26,8 @@ RUN chmod +x /usr/local/bin/init.sh
 
 # Copy data to container
 COPY . /var/www/html
+
+RUN cp laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
 
 RUN composer install --no-interaction --ignore-platform-reqs
 
