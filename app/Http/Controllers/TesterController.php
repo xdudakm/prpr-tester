@@ -24,7 +24,15 @@ class TesterController extends Controller
 
         TestJob::dispatch($baseFileName, $resultFilename);
 
-        // Return the result as JSON
-        return response()->json(['result_url' => Storage::disk('public')->url('results/' . $resultFilename)]);
+        return response()->json(['result_url' => route('results', $resultFilename)]);
+    }
+
+    public function getResults(Request $request, string $fileName)
+    {
+        $path = '/results/' . $fileName;
+        if(!Storage::disk('public')->exists($path))
+            return response('Working on it');
+        $content = Storage::disk('public')->get($path);
+        return response($content)->header('Content-Type', 'text/plain');
     }
 }
