@@ -23,10 +23,7 @@ class TestJob implements ShouldQueue
     {
         $this->fileName = $fileName;
         $this->resultsFileName = $resultsFileName;
-        if ($inputFileNames != null)
-            $this->inputFileNames = $inputFileNames;
-        else
-            $this->inputFileNames = config('app.supported_functions');
+        $this->inputFileNames = $inputFileNames;
     }
 
     /**
@@ -36,7 +33,7 @@ class TestJob implements ShouldQueue
     {
         exec('echo tests: > /var/www/html/storage/app/private/tester/input.yaml');
         foreach ($this->inputFileNames as $inputFileName) {
-            exec("awk 'NR > 1' /var/www/html/storage/app/private/tester/scenarios/" . $inputFileName . ".yaml >> /var/www/html/storage/app/private/tester/input.yaml");
+            exec("cat /var/www/html/storage/app/private/tester/scenarios/" . $inputFileName . ".yaml >> /var/www/html/storage/app/private/tester/input.yaml");
         }
 
         shell_exec('cd /var/www/html/storage/app/private/tester && ./tester');

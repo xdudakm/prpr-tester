@@ -29,6 +29,8 @@ COPY . /var/www/html
 
 RUN cp laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
 
+RUN touch database/database.sqlite
+
 RUN composer install --no-interaction --ignore-platform-reqs
 
 RUN mkdir ./storage/app/public/results -p || :
