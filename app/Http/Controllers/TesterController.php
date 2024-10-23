@@ -21,7 +21,7 @@ class TesterController extends Controller
         $baseFileName = str_replace('.c', '', basename($path));
         $resultFilename = $baseFileName . '_release.log';
 
-        TestJob::dispatchSync($baseFileName, $resultFilename);
+        TestJob::dispatch($baseFileName, $resultFilename);
 
         return response('Your results will be soon available at ' . route('results', $resultFilename));
     }
