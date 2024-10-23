@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Jobs\TestJob;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 
 class TesterController extends Controller
@@ -15,6 +16,7 @@ class TesterController extends Controller
             'file' => 'required|file|mimes:c',
         ]);
 
+        Log::info("Request received, creating job");
         // Store the uploaded file
         $path = $request->file('file')->store('tester/files');
         $baseFileName = str_replace('.c', '', basename($path));
