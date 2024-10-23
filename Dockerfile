@@ -1,5 +1,6 @@
 FROM php:8.3-fpm
 
+USER www
 WORKDIR /var/www/html
 
 # Install system dependencies

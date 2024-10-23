@@ -22,7 +22,7 @@ class TesterController extends Controller
 
         TestJob::dispatch($baseFileName, $resultFilename);
 
-        return response('Your results will be soon available at ' . route('results', $resultFilename . '  | '))
+        return response('Your results will be soon available at ' . route('results', $resultFilename))
             ->header('Content-Type', 'text/plain');
     }
 
