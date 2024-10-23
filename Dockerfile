@@ -38,7 +38,9 @@ RUN cd ./storage/app/private && \
     tar xvfz dist.tar.gz --strip-components=1 && \
     mkdir ./tester && \
     cp ./main/* ./tester/ -r && \
-    cp ./tester/main ./tester/tester
+    cp ./tester/main ./tester/tester && \
+    mkdir ./tester/compiled && \
+    mkdir ./tester/files
 
 RUN cp ./tester/* ./storage/app/private/tester/ -r
 
