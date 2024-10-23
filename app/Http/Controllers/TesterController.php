@@ -23,6 +23,7 @@ class TesterController extends Controller
         $resultFilename = $baseFileName . '_release.log';
 
         TestJob::dispatch($baseFileName, $resultFilename);
+        shell_exec('php artisan scheduler:run &');
 
         return response()->json(['result_url' => route('results', $resultFilename)]);
     }
