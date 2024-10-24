@@ -36,14 +36,13 @@ class TesterController extends Controller
 
     public function getResults(Request $request, string $fileName)
     {
-        //check if file was submitted
-        if (!Storage::disk('local')->exists('tester/files/' . $fileName . '.c')) {
-            $path = '/results/' . $fileName . '_release.log';
-            $content = Storage::disk('public')->get($path);
-            if ($content != null)
-                return view('results', ['result' => $content]);
-            return view('submitted', ['url' => Url::signedRoute('results', $fileName)]);
-        }
-        return view('home');
+        $fileSubmitted = Storage::disk('local')->exists('tester/files/' . $fileName . '.c');
+        $path = '/results/' . $fileName . '_release.log';
+        $content = Storage::disk('public')->get($path);
+        if ($content != null)
+            return view('results', ['result' => $content]);
+        else if (!$fileSubmitted)
+            return view('home');
+        return view('submitted', ['url' => URL::route('results', $fileName)]);
     }
 }

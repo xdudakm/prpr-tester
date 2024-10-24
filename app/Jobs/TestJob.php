@@ -18,7 +18,7 @@ class TestJob implements ShouldQueue
     /**
      * Create a new job instance.
      */
-    public function __construct(string $fileName, $resultsFileName, $inputFileNames)
+    public function __construct(string $fileName, $inputFileNames)
     {
         $this->fileName = $fileName;
         $this->inputFileNames = $inputFileNames;
