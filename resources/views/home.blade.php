@@ -112,11 +112,16 @@
 
 <div class="instructions">
     <p>
-        After submitting the program, an URL will be returned for the results. The submitted program must end at "k" input; otherwise,
-        the result will not contain relevant data.
+        This web works as an interface for <a href="https://github.com/FedorViest/opp_prpr2024/blob/main/Tester/README.md"
+                                              target="_parent">OPP PRPR Tester</a>.
+    </p>
+    <h3>How to use</h3>
+    <p>
+        After submitting the program, an URL will be returned for the results. The submitted program must end at "k" input.
+        Otherwise there will be no test results.
         <br>
         Should you have any problems, contact me at <a href="mailto:xdudakm@stuba.sk">xdudakm@stuba.sk</a>
     </p>
 </div>
-</body>
+</body>6666
 </html>

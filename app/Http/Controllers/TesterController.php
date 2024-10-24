@@ -37,13 +37,13 @@ class TesterController extends Controller
 
     public function getResults(Request $request, string $fileName)
     {
-//        if ($request->hasValidSignature()) {
+        if ($request->hasValidSignature()) {
             $path = '/results/' . $fileName;
             $content = Storage::disk('public')->get($path);
             if ($content != null)
                 return view('results', ['result' => $content]);
             return view('submitted', ['url' => Url::signedRoute('results', $fileName)]);
-//        }
-//        return view('home');
+        }
+        return view('home');
     }
 }
