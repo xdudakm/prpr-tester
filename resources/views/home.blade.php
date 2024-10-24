@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PRPR Tester</title>
+    <title>PRPR Tester Interface</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -82,7 +82,7 @@
     </style>
 </head>
 <body>
-<h1>PRPR Tester</h1>
+<h1>PRPR Tester Interface</h1>
 
 @if (session('success'))
     <p class="success">{{ session('success') }}</p>
