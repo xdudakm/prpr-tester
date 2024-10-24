@@ -123,5 +123,5 @@
         Should you have any problems, contact me at <a href="mailto:xdudakm@stuba.sk">xdudakm@stuba.sk</a>
     </p>
 </div>
-</body>6666
+</body>
 </html>
