@@ -28,17 +28,17 @@ class TesterController extends Controller
         // Store the uploaded file
         $path = $request->file('file')->store('tester/files');
         $baseFileName = str_replace('.c', '', basename($path));
-        $resultFilename = $baseFileName . '_release.log';
 
-        TestJob::dispatch($baseFileName, $resultFilename, $functions);
+        TestJob::dispatch($baseFileName, $functions);
 
-        return view('submitted', ['url' => URL::signedRoute('results', $resultFilename)]);
+        return view('submitted', ['url' => URL::route('results', $baseFileName)]);
     }
 
     public function getResults(Request $request, string $fileName)
     {
-        if ($request->hasValidSignature()) {
-            $path = '/results/' . $fileName;
+        //check if file was submitted
+        if (!Storage::disk('local')->exists('tester/files/' . $fileName . '.c')) {
+            $path = '/results/' . $fileName . '_release.log';
             $content = Storage::disk('public')->get($path);
             if ($content != null)
                 return view('results', ['result' => $content]);

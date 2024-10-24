@@ -13,7 +13,6 @@ class TestJob implements ShouldQueue
     use Queueable;
 
     private string $fileName;
-    private string $resultsFileName;
     private array $inputFileNames;
 
     /**
@@ -22,7 +21,6 @@ class TestJob implements ShouldQueue
     public function __construct(string $fileName, $resultsFileName, $inputFileNames)
     {
         $this->fileName = $fileName;
-        $this->resultsFileName = $resultsFileName;
         $this->inputFileNames = $inputFileNames;
     }
 
@@ -38,8 +36,9 @@ class TestJob implements ShouldQueue
 
         shell_exec('cd /var/www/html/storage/app/private/tester && ./tester');
 
-        shell_exec("mv /var/www/html/storage/app/private/tester/results/" . $this->resultsFileName .
-            ' /var/www/html/storage/app/public/results/' . $this->resultsFileName);
+        $resultsFileName = $this->fileName . '_release.log';
+        shell_exec("mv /var/www/html/storage/app/private/tester/results/" . $resultsFileName .
+            ' /var/www/html/storage/app/public/results/' . $resultsFileName);
         shell_exec('rm /var/www/html/storage/app/private/tester/*/' . $this->fileName . '*');
     }
 }
