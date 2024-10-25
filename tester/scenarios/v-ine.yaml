@@ -1,8 +1,6 @@
 - name: "Test v1"
   points: 0.3
   sequence:
-    - in: "v"
-    - in: "5"
-    - in: "v"
-    - in: "-1"
+    - in: "v 5"
+    - in: "v -1"
     - in: "k"

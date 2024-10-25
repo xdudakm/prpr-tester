@@ -1,7 +1,16 @@
-- name: "Test v1"
-  points: 1.4
+- name: "Test v2: arrays not filled"
+  points: 0.2
+  sequence:
+    - in: "v 2"
+    - out: "V2: Nenaplnene polia."
+    - in: "k"
+
+- name: "Test v2"
+  points: 1.2
   sequence:
     - in: "v 1"
+    - in: "n"
+    - in: "v 2"
     - out: "ID. mer. modulu: ID152a"
     - out: "Hodnota 1: 154"
     - out: "Hodnota 2: 0.5481"

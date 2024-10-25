@@ -1,0 +1,14 @@
+- name: "Test n: files not open"
+  points: 0.2
+  sequence:
+    - in: "n"
+    - out: "N: Neotvoreny subor."
+    - in: "k"
+
+- name: "Test n: reallocation"
+  points: 1.8
+  sequence:
+    - in: "v 1"
+    - in: "n"
+    - in: "n"
+    - in: "k"

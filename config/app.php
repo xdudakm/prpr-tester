@@ -3,7 +3,7 @@
 return [
 
     'supported_functions' => [
-        'v1', "v-ine", 'h', 'k'
+        'v1', "v2", "v-ine", 'h', "n", "q", "w", "e", 'k'
     ],
 
     /*

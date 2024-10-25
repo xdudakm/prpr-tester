@@ -1,3 +1,10 @@
+- name: "Test k: files closed"
+  points: 0.0
+  sequence:
+    - in: "h"
+    - out: "H: Neotvoreny subor."
+    - in: "k"
+
 - name: "Test k"
   points: 0
   sequence:

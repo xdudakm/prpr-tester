@@ -37,10 +37,14 @@
     </pre>
 
 <div class="instructions">
-    <h3>Don't know why there are no test results???</h3>
-    <p>
-        Check if your program ends when 'k' is passed on standard input.
-    </p>
+    <h3>Don't know why there are no test results, or the result is "GOT TIMEOUT - Stuck in loop?"???</h3>
+    <ul>
+        <li>Check if your program ends when 'k' is passed on standard input.</li>
+        <li>Check if you are outputting new lines correctly (tester might be waiting for new line output and will timeout if nothing
+            comes)
+        </li>
+    </ul>
+
 </div>
 
 <h2><a href="{{route('home')}}">Back to home</a></h2>
