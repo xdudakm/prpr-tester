@@ -79,6 +79,14 @@
         .error {
             color: red;
         }
+
+        table, td, th {
+            border: 1px solid;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
     </style>
 </head>
 <body>
@@ -120,7 +128,51 @@
         After submitting the program, an URL will be returned for the results. The submitted program must end at "k" input.
         Otherwise there will be no test results.
         <br>
-        Should you have any problems, contact me at <a href="mailto:xdudakm@stuba.sk">xdudakm@stuba.sk</a>
+        When testing some functions, other functions are used for their validation:
+    <table>
+        <tr>
+            <th>Function</th>
+            <th>Prerequisite</th>
+        </tr>
+        <tr>
+            <td>v1</td>
+            <td>k</td>
+        </tr>
+        <tr>
+            <td>v2</td>
+            <td>v1, n, k</td>
+        </tr>
+        <tr>
+            <td>v-ine</td>
+            <td>k</td>
+        </tr>
+        <tr>
+            <td>h</td>
+            <td>v1, k</td>
+        </tr>
+        <tr>
+            <td>n</td>
+            <td>v1, v2, k</td>
+        </tr>
+        <tr>
+            <td>q</td>
+            <td>v1, v2, n, k</td>
+        </tr>
+        <tr>
+            <td>w</td>
+            <td>v1, v2, n, k</td>
+        </tr>
+        <tr>
+            <td>e</td>
+            <td>v1, n, k</td>
+        </tr>
+        <tr>
+            <td>k</td>
+            <td></td>
+        </tr>
+    </table>
+    <br>
+    Should you have any problems, contact me at <a href="mailto:xdudakm@stuba.sk">xdudakm@stuba.sk</a>
     </p>
 </div>
 </body>
