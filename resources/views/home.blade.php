@@ -180,7 +180,7 @@
         </tr>
         <tr>
             <td>k</td>
-            <td>v1, n</td>
+            <td></td>
         </tr>
     </table>
     <br>
