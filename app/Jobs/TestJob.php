@@ -37,8 +37,10 @@ class TestJob implements ShouldQueue
         shell_exec('cd /var/www/html/storage/app/private/tester && ./tester');
 
         $resultsFileName = $this->fileName . '_release.log';
-        shell_exec("mv /var/www/html/storage/app/private/tester/results/" . $resultsFileName .
-            ' /var/www/html/storage/app/public/results/' . $resultsFileName);
+        $valgrindFileName = $this->fileName . '_release.valgrind';
+        $resultsPath = '/var/www/html/storage/app/private/tester/results/';
+        shell_exec('cat ' . $resultsPath . $resultsFileName . ' >> ' . $resultsPath . $valgrindFileName);
+        shell_exec("mv " . $resultsPath . $valgrindFileName . ' /var/www/html/storage/app/public/results/' . $valgrindFileName);
         shell_exec('rm /var/www/html/storage/app/private/tester/*/' . $this->fileName . '*');
     }
 }

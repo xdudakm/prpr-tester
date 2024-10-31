@@ -37,7 +37,7 @@ class TesterController extends Controller
     public function getResults(Request $request, string $fileName)
     {
         $fileSubmitted = Storage::disk('local')->exists('tester/files/' . $fileName . '.c');
-        $path = '/results/' . $fileName . '_release.log';
+        $path = '/results/' . $fileName . '_release.valgrind';
         $content = Storage::disk('public')->get($path);
         if ($content != null)
             return view('results', ['result' => $content]);
