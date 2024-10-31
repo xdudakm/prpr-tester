@@ -1,5 +1,5 @@
 - name: "Test k: files closed"
-  points: 0.0
+  points: 0
   sequence:
     - in: "h"
     - out: "H: Neotvoreny subor."
