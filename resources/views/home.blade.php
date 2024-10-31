@@ -143,6 +143,10 @@
             <td>v1, n, k</td>
         </tr>
         <tr>
+            <td>v3</td>
+            <td>v1, m, k</td>
+        </tr>
+        <tr>
             <td>v-ine</td>
             <td>k</td>
         </tr>
@@ -165,6 +169,10 @@
         <tr>
             <td>e</td>
             <td>v1, n, k</td>
+        </tr>
+        <tr>
+            <td>m</td>
+            <td>v1, k</td>
         </tr>
         <tr>
             <td>k</td>
