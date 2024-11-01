@@ -179,6 +179,14 @@
             <td>v1, m, v3, k</td>
         </tr>
         <tr>
+            <td>s</td>
+            <td>v1, m, v3, k</td>
+        </tr>
+        <tr>
+            <td>d</td>
+            <td>v1, m, v3, k</td>
+        </tr>
+        <tr>
             <td>k</td>
             <td></td>
         </tr>

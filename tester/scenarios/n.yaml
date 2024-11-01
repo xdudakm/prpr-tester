@@ -62,6 +62,8 @@
     - out: "Poznamka: ID121c#5.4654#1442#pas emul. #"
     - out: ""
     - in: "n"
+    - in: "n"
+    - in: "n"
     - in: "v 2"
     - out: "ID. mer. modulu: ID152a"
     - out: "Hodnota 1: 154"
