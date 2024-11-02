@@ -1,12 +1,12 @@
 - name: "Test v2: arrays not filled"
-  points: 0
+  points: 0.2
   sequence:
     - in: "v 2"
     - out: "V2: Nenaplnene polia."
     - in: "k"
 
 - name: "Test v2"
-  points: 0
+  points: 1.2
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"

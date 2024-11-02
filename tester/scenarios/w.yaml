@@ -1,12 +1,12 @@
 - name: "Test w: arrays not created"
-  points: 0
+  points: 0.2
   sequence:
     - in: "w"
     - out: "W: Polia nie su vytvorene."
     - in: "k"
 
 - name: "Test w: delete single"
-  points: 0
+  points: 1
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
@@ -63,7 +63,7 @@
 
 
 - name: "Test w: delete many"
-  points: 0
+  points: 1
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"

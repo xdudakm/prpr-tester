@@ -1,5 +1,5 @@
 - name: "Test h"
-  points: 0
+  points: 1.5
   sequence:
     #      open files and grab the output
     - in: "v"
@@ -43,7 +43,7 @@
     - out: "6 : 1"
     - in: "k"
 - name: "Test h: unsuccessful file opening"
-  points: 0
+  points: 0.2
   sequence:
     - in: "h"
     - out: "H: Neotvoreny subor."

@@ -1,5 +1,5 @@
 - name: "Test v1"
-  points: 0
+  points: 1.4
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
