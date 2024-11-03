@@ -1,10 +1,10 @@
 - name: "Test k"
-  points: 0
+  points: 1.5
   sequence:
     - in: "k"
 
 - name: "Test k: allocated dynamic array"
-  points: 0
+  points: 1
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
@@ -43,7 +43,7 @@
     - in: "k"
 
 - name: "Test k: allocated linked list"
-  points: 0
+  points: 1
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
