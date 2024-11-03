@@ -1,12 +1,12 @@
 - name: "Test m: files not open"
-  points: 0
+  points: 0.2
   sequence:
     - in: "m"
     - out: "M: Neotvoreny subor."
     - in: "k"
 
 - name: "Test m: reallocation"
-  points: 0
+  points: 4.2
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
