@@ -110,7 +110,7 @@
         <h3>Select functions to be tested:</h3>
         @foreach (config('app.supported_functions') as $function)
             <label>
-                <input type="checkbox" name="functions[]" checked value="{{ $function }}"> {{ $function }}
+                <input type="checkbox" name="functions[]" value="{{ $function }}"> {{ $function }}
             </label>
         @endforeach
     </div>

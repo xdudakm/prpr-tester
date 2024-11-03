@@ -6,7 +6,7 @@
     - in: "k"
 
 - name: "Test w: delete first"
-  points: 0.5
+  points: 0.4
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
@@ -62,7 +62,7 @@
     - in: "k"
 
 - name: "Test w: delete single"
-  points: 0.5
+  points: 0.4
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
@@ -118,7 +118,7 @@
     - in: "k"
 
 - name: "Test w: delete last"
-  points: 0.5
+  points: 0.4
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
@@ -174,7 +174,7 @@
     - in: "k"
 
 - name: "Test w: delete many"
-  points: 0.5
+  points: 0.4
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
