@@ -121,12 +121,15 @@
 <div class="instructions">
     <p>
         This web works as an interface for <a href="https://github.com/FedorViest/opp_prpr2024/blob/main/Tester/README.md"
-                                              target="_parent">OPP PRPR Tester</a>.
+                                              target="_blank">OPP PRPR Tester</a>.
     </p>
     <h3>How to use</h3>
     <p>
         After submitting the program, an URL will be returned for the results. The submitted program must end at "k" input.
         Otherwise there will be no test results.
+        <br>
+        Scenarios used in the tests are available <a href="https://github.com/xdudakm/prpr-tester/tree/master/tester/scenarios"
+                                                     target="_blank">HERE</a>.
         <br>
         When testing some functions, other functions are used for their validation:
     <table>
