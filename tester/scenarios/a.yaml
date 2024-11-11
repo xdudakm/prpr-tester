@@ -1,8 +1,18 @@
 - name: "Test a: linked list not created"
-  points: 0.2
+  points: 0.6
   sequence:
-    - in: "a"
-    - out: "A: Spajany zoznam nie je vytvoreny."
+    - in: "a 1"
+    - in: "ID142s"
+    - in: "142 115 25 12.5"
+    - in: "ID142s#0.4854#1742#davkovanie smotany#"
+    - in: "v 3"
+    - out: "ID. mer. modulu: ID142s"
+    - out: "Hodnota 1: 25"
+    - out: "Hodnota 2: 12.5"
+    - out: "Poznamka ID: ID142s"
+    - out: "Poznamka C: 17 : 42 => 0.4854"
+    - out: "Poznamka T: davkovanie smotany"
+    - out: ""
     - in: "k"
 
 - name: "Test a: add to beginning"
@@ -166,7 +176,7 @@
     - in: "k"
 
 - name: "Test a: add to end"
-  points: 0.7
+  points: 0.6
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
@@ -246,7 +256,7 @@
     - in: "k"
 
 - name: "Test a: add empty parse"
-  points: 0.5
+  points: 0.2
   sequence:
     - in: "v 1"
     - out: "ID. mer. modulu: ID152a"
