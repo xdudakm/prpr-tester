@@ -191,7 +191,7 @@
         </tr>
         <tr>
             <td>k</td>
-            <td></td>
+            <td>n, q, w, m, a, s, d</td>
         </tr>
     </table>
     <br>
