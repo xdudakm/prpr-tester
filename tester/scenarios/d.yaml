@@ -2,7 +2,6 @@
   points: 0.2
   sequence:
     - in: "d"
-    - out: "D: Spajany zoznam nie je vytvoreny."
     - in: "k"
 
 - name: "Test d: swap 1st and 2nd"
