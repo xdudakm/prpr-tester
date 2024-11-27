@@ -75,7 +75,7 @@
     - out: "M: Nacitalo sa 5 zaznamov."
     - in: "a 1"
     - in: "ID142s"
-    - in: "142 115 25 12,5"
+    - in: "142 115 25 12.5"
     - in: "ID142s#0.4854#1742#davkovanie smotany#"
     - in: "s ID142s"
     - out: "S: Vymazalo sa : 1 zaznamov !"
